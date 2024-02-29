@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B65B19AD-2185-4496-9707-54BE3AA8C003}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>sio_shop</RootNamespace>
+    <AssemblyName>sio_shop</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\Downloads\mysql-connector-net-8.0.26-noinstall\v4.8\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bddLink.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="Employe.cs" />
+    <Compile Include="fm_client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fm_client.Designer.cs">
+      <DependentUpon>fm_client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fm_cnx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fm_cnx.Designer.cs">
+      <DependentUpon>fm_cnx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fm_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fm_details.Designer.cs">
+      <DependentUpon>fm_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fm_details_pdt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fm_details_pdt.Designer.cs">
+      <DependentUpon>fm_details_pdt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fm_menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fm_menu.Designer.cs">
+      <DependentUpon>fm_menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fm_produit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fm_produit.Designer.cs">
+      <DependentUpon>fm_produit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fm_vente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fm_vente.Designer.cs">
+      <DependentUpon>fm_vente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pdf.cs" />
+    <Compile Include="Personne.cs" />
+    <Compile Include="Produit.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fm_client.resx">
+      <DependentUpon>fm_client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fm_cnx.resx">
+      <DependentUpon>fm_cnx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fm_details.resx">
+      <DependentUpon>fm_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fm_details_pdt.resx">
+      <DependentUpon>fm_details_pdt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fm_menu.resx">
+      <DependentUpon>fm_menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fm_produit.resx">
+      <DependentUpon>fm_produit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fm_vente.resx">
+      <DependentUpon>fm_vente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abstract-geometric-background--cold-colors.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,7 @@
+C:\Users\Dupont\source\repos\convertisseur_sql\bin\Debug\convertisseur_sql.exe.config
+C:\Users\Dupont\source\repos\convertisseur_sql\bin\Debug\convertisseur_sql.exe
+C:\Users\Dupont\source\repos\convertisseur_sql\bin\Debug\convertisseur_sql.pdb
+C:\Users\Dupont\source\repos\convertisseur_sql\obj\Debug\convertisseur_sql.csprojAssemblyReference.cache
+C:\Users\Dupont\source\repos\convertisseur_sql\obj\Debug\convertisseur_sql.csproj.CoreCompileInputs.cache
+C:\Users\Dupont\source\repos\convertisseur_sql\obj\Debug\convertisseur_sql.exe
+C:\Users\Dupont\source\repos\convertisseur_sql\obj\Debug\convertisseur_sql.pdb
